@@ -1,0 +1,371 @@
+api key :2a5258e9337b2768f51895bd8d8b2367
+이상형
+total_list = []
+while True:
+    question = input("질문을 입력해주세요 : ")
+    if question == "q":
+        break
+    else:
+        total_list.append({"질문" : question, "답변" : ""})
+
+
+for i in total_list:
+    print(i["질문"])
+    answer = input("답변을 입력해주세요 : ")
+    i["답변"] = answer
+print(total_list)
+
+오늘뭐먹어
+
+import random
+import time
+
+lunch = ["된장찌개", "피자", "제육볶음", "짜장면"]
+
+while True:
+    print(lunch)
+    item = input("음식을 추가 해주세요 : ")
+    if(item == "q"):
+        break
+    else:
+        lunch.append(item)
+print(lunch)
+
+set_lunch = set(lunch)
+while True:
+    print(set_lunch)
+    item = input("음식을 삭제해주세요 : ")
+    if(item == "q"):
+        break
+    else:
+        set_lunch = set_lunch - set([item])
+
+print(set_lunch, "중에서 선택합니다.")
+print("5")
+time.sleep(1)
+print("4")
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(1)
+print(random.choice(list(set_lunch)))
+
+집합사용
+menu1 = set(["된장찌개", "피자", "제육볶음"])
+menu2 = set(["된장찌개", "떡국", "김밥"])
+menu3 = menu1 - menu2
+print(menu3)
+
+
+친구야 안녕(int(),print(),input()
+
+월세&관리비
+월세 = int(input("월세를 입력해주세요 : "))
+관리비 = int(input("관리비를 입력해주세요 : "))
+
+print(월세 + 관리비)
+print(월세 - 관리비)
+print((월세 + 관리비) * 12)
+print(월세 / 관리비)
+
+숫자
+num = [20, 40, 50, 10, 30]
+
+print(max(num))
+print(min(num))
+
+짜장
+menu = {"짜장" : 4000, "짬뽕" : 5000, "탕수육" : 9000}
+menu["냉면"] = 6000
+print(menu["짬뽕"])
+menu["탕수육"] = 8500
+del menu["짜장"]
+print(menu)
+
+학번
+myGrade = int(input("학번을 입력하세요 : "))
+yourGrade = int(input("학번을 입력하세요 : "))
+if myGrade == yourGrade :
+    print("안녕하세요 동기님!")
+elif myGrade > yourGrade :
+    print("안녕하세요 선배님!")
+elif myGrade < yourGrade :
+    print("안녕하세요 후배님!")
+else :
+    print("누구세요?")
+
+
+
+chi_menu = {"냉면":"4000", "짜장면":"6000"}
+
+
+while True:
+    print(chi_menu)
+    food=input("(종료는 q)추가 음식을 입력해:")
+    if food=="q":
+        break
+    else:
+        chi_menu[food]=""
+print(chi_menu)
+for i in chi_menu:
+    print(i)
+    price = input("가격을 입력하시오:")
+    chi_menu[i]=price
+
+while True:
+    src = input("(종료는 q)음식 얼마죠?:")
+    if src == "q":
+        break
+    else:
+        print(chi_menu.get(src))
+while True:
+    src = input("(종료는 q)변경할 가격의 음식은?:")
+    if src == "q":
+        break
+    else:
+        print(chi_menu.get(src))
+        prc = input("변경할 가격은?:")
+        chi_menu[src]=prc
+while True:
+    food=input("(종료는 q)마감한 음식을 입력해:")
+    if food=="q":
+        break
+    else:
+        del chi_menu[food]
+print(chi_menu)
+
+
+순차출력
+i = 5
+
+while i >= 0 :
+    print(i)
+    i = i - 1
+
+건너뛰기
+i = 0
+while i < 10 :
+    i = i + 1
+
+    if i % 2 == 0 :
+        continue
+    print(i)
+print("반복 종료!")
+
+특징반복
+for x in range(2, 31, 2) :
+    print(x)
+#2~31까지 2씩증가
+
+
+  별밤
+1.for x in range(25) :
+    print("*", end="")
+    if (x+1) % 5 == 0:
+        print("")
+2.
+for x in range(5) :
+    for y in range(x+1) :
+        print("*", end="")
+    print("")
+
+줄바꿈
+1.
+x = int(input("숫자를 입력해주세요 : "))
+
+for i in range(x) :
+    print(x-i)
+2.
+x = int(input("숫자를 입력해주세요 : "))
+
+for i in range(x) :
+    print(i+1, end=" ")
+    if (i+1) % 10 == 0:
+        print("")
+로또번호
+1.
+import random
+x = int(input("몇개 살거냐?")) 
+
+for i in range(x):
+    loto = random.sample(range(1, 46), 6)
+    loto.sort()
+    print(loto)
+
+
+2.
+
+import random
+x = int(input("몇개 살거냐?")) 
+
+for i in range(x):
+    loto = random.sample(range(1, 46), 6)
+    print(loto)
+    for x in range(6):
+        for y in range(5):
+            if loto[y]>loto[y+1]:
+                loto.insert[y]
+
+    print(loto)
+
+
+3.
+import random
+
+count = int(input("로또를 몇개 구매하시겠습니까? "))
+
+for i in range(count) :
+    lotto = random.sample(range(1, 46), 6)
+    lotto.sort()
+    print(lotto)
+
+print("로또 종료")
+
+
+날씨프로그램
+
+import requests
+import json
+
+city = "Seoul"
+apikey = "2a5258e9337b2768f51895bd8d8b2367"
+lang = "kr"
+
+api = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}&lang={lang}&units=metric"
+
+result = requests.get(api)
+#print(result.text)
+#print(type(result.text))
+data = json.loads(result.text)
+
+print(data["name"],"의 날씨입니다.") #딕션어리속 "name"키 값가져와서 프린트 
+print("날씨는 ",data["weather"][0]["description"],"입니다.")#weather딕션안 0번째리스트,description의 밸류 받기
+print("현재 온도는 ",data["main"]["temp"],"입니다.")#딕션안의 딕션은 [][]로 연결
+print("하지만 체감 온도는 ",data["main"]["feels_like"],"입니다.")
+print("최저 기온은 ",data["main"]["temp_min"],"입니다.")
+print("최고 기온은 ",data["main"]["temp_max"],"입니다.")
+print("습도는 ",data["main"]["humidity"],"입니다.")
+print("기압은 ",data["main"]["pressure"],"입니다.")
+print("풍향은 ",data["wind"]["deg"],"입니다.")
+print("풍속은 ",data["wind"]["speed"],"입니다.")
+
+
+번역기!!!!
+
+from googletrans import Translator
+
+translator = Translator()
+sentence = "좋은 아침이에요"
+#sentence = input("번역을 원하는 문장을 입력하세요 : ")
+
+result = translator.translate(sentence, dest="en")#dest는destination
+detected = translator.detect(sentence)
+
+print("\n============= 번역 결과 ============\n")
+print(detected.lang,":",sentence)
+print(detect.lang,":", result.origin)#origin은 번역전 문장
+print(result.dest,":", result.text)#변역할 언어:변역 결과값
+print("\n====================================\n")
+
+번역기2
+from googletrans import Translator
+
+translator = Translator()
+
+# sentence = "안녕하세요 코드라이언입니다."
+sentence = input("번역을 원하는 문장을 입력해주세요 : ")
+dest = input("어떤 언어로 번역을 원하시나요?")
+
+result = translator.translate(sentence,dest)
+detected = translator.detect(sentence)
+
+print("===========출 력 결 과===========")
+print(detected.lang,":",sentence)
+print(result.dest,":",result.text)
+print("=================================")
+
+
+메일작성
+
+import smtplib
+from email.message import EmailMessage
+
+SMTP_SERVER = "smtp.gmail.com" #구글서버 주소
+SMTP_PORT = 465 #구글 전용 포트
+
+message = EmailMessage() #Mime 형태통 집합 민들기?
+message.set_content("코드라이언 수업중입니다.") #mime 통안에 내용넣기?
+
+message["Subject"] = "이것은 제목입니다."
+message["From"] = "###@gmail.com"
+message["To"] = "###@gmail.com"
+
+smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT) #서버접속시 필요 암구호?
+smtp.login("###@gmail.com","######")
+smtp.send_message(message)#message 보내기
+smtp.quit()#몰라???? 서버와 연결 끊기
+
+사진과 함께
+import smtplib
+from email.message import EmailMessage
+import imghdr
+
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 465
+
+message = EmailMessage()
+message.set_content("코드라이언 수업중입니다.")
+
+message["Subject"] = "이것은 제목입니다."
+message["From"] = "###@gmail.com"
+message["To"] = "###@gmail.com"
+
+with open("codelion.png","rb") as image:
+    image_file = image.read()
+
+image_type = imghdr.what('codelion',image_file)
+message.add_attachment(image_file,maintype='image',subtype=image_type)
+
+smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
+smtp.login("###@gmail.com","######")
+smtp.send_message(message)
+smtp.quit()
+
+완성메일
+import smtplib
+from email.message import EmailMessage
+import imghdr
+import re
+
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 465
+
+def sendEmail(addr):
+    reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$"
+    if bool(re.match(reg,addr)):
+        smtp.send_message(message)
+        print("정상적으로 메일이 발송되었습니다.")
+    else:
+        print("유효한 이메일 주소가 아닙니다.")
+
+message = EmailMessage()
+message.set_content("코드라이언 수업중입니다.")
+
+message["Subject"] = "이것은 제목입니다."
+message["From"] = "###@gmail.com"
+message["To"] = "###@gmail.com"
+
+with open("codelion.png","rb") as image:
+    image_file = image.read()
+
+image_type = imghdr.what('codelion',image_file)
+message.add_attachment(image_file,maintype='image',subtype=image_type)
+
+smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
+smtp.login("###@gmail.com","######")
+# 메일을 보내는 sendEmail 함수를 호출해서 실행해보기
+sendEmail("###gmailcom")
+smtp.quit()
